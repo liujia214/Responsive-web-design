@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            margin: 0;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        header{
+            text-align: center;
+            background-color: red;
+        }
+        section{
+            background-color: #8eceff;
+        }
+        nav, article{
+            height: 300px;
+        }
+        ul{
+            padding: 0;
+        }
+        li{
+            list-style-type: none;
+            margin: 10px;
+            padding: 20px;
+            background-color: green;
+        }
+        #food{
+            background:url("images/food.png") no-repeat;
+            background-size: 100% 100%;
+            height: 300px;
+        }
+        .row:after{
+            display: none;
+            content: "";
+            clear: both;
+        }
+        .border{
+            border-right: 1px solid gray;
+        }
+        footer{
+            background-color: gray;
+            text-align: center;
+        }
+        [class*="col-"]{
+            float: left;
+            padding: 15px;
+        }
+        @media only screen and (min-device-width:800px){
+            .col-3{
+                width:25%;
+            }
+            .col-6{
+                width: 50%;
+            }
+            .col-12{
+                width: 100%;
+            }
+        }
+        @media only screen and (min-device-width: 500px) and (max-device-width: 800px) {
+
+            .col-t3{
+                width:25% ;
+            }
+            .col-t9{
+                width: 75%;
+            }
+            .col-t12{
+                width: 100%;
+            }
+
+        }
+        @media screen and (max-device-width: 500px) {
+            .col-m12{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <header class="col-m12 col-t12 col-12">
+            <h1>
+                Best Food in the World
+            </h1>
+        </header>
+        <section class="col-12 col-t12 col-m12">
+            <nav class="col-3 col-t3 col-m12 border">
+                <ul>
+                    <li>Asian Food</li>
+                    <li>Mexico Food</li>
+                    <li>Africa Food</li>
+                </ul>
+            </nav>
+            <article class="col-6 col-t9 col-m12 border">
+                <p>
+                    Already in recent years, chefs-cook-at-home books (Mario Batali and his two sons, John Besh and his four sons) were taking hold—last year in interesting juxtaposition to some of the most technically challenging chef books that had appeared in a long time (Gabriel Rucker's Le Pigeon: Cooking at the Dirty Bird, David Kinch's Manresa: An Edible Reflection). When Marcus Samuelsson set out to write his entry, he had an unusual variety of homes to draw on: his native Ethiopia, his adoptive Sweden, his adopted home of New York City. Like all chefs, he had the experience of repetition and discipline, which he detailed in his moving, precisely observed memoir, Yes, Chef.
+                </p>
+            </article>
+            <aside class="col-3 col-t12 col-m12">
+                <div id="food"></div>
+            </aside>
+        </section>
+        <footer class="col-m12 col-t12 col-12">
+            <b><a href="">Contact us(510-888-6666)</a></b>
+        </footer>
+    </div>
+</body>
+</html>
